@@ -1,24 +1,25 @@
 const Joi = require('joi');
 
-const balderdash = require('../handlers/balderdash');
+const develop = require('../handlers/develop');
+const master = require('../handlers/master');
 
 module.exports = [
   {
-    method: 'GET',
-    path: '/balderdash',
-    handler: balderdash,
+    method: 'POST',
+    path: '/develop',
+    handler: develop,
     config: {
-      description: 'BALDERDASH!',
+      description: 'Post Update on Develop Repo',
       notes: 'Returns a 200',
       tags: ['api'],
     },
   },
   {
     method: 'POST',
-    path: '/balderdash',
-    handler: balderdash,
+    path: '/master',
+    handler: master,
     config: {
-      description: 'BALDERDASH!',
+      description: 'Post Update on Master Repo',
       notes: 'Returns a 200',
       tags: ['api'],
     },

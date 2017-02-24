@@ -1,6 +1,6 @@
 const exec = require('child_process').exec;
 
-module.exports = function balderdash(request, reply) {
+module.exports = function develop(request, reply) {
   console.log('request', request);
   const child = exec('sh ~/balderdash.sh', (error, stdout, stderr) => {
     if (error) {
