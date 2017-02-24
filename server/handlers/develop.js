@@ -1,12 +1,17 @@
 const exec = require('child_process').exec;
+const boom = require('boom');
+const githook = require('../lib/githook');
 
 module.exports = function develop(request, reply) {
-  console.log('request', request);
-  const child = exec('sh ~/balderdash.sh', (error, stdout, stderr) => {
-    if (error) {
-      throw error;
-    }
-    console.log(stdout);
-    reply(stdout).code(200);
-  });
+  const refRef = '/refs/heads/develop';
+  const shellPath = 'sh ~/GitHub/RepoName/.git/hooks/post-update';
+  if (request.payload.ref === refRef) {
+    gitHook(shellPath)
+      .then((res) =>{
+        reply(res).code(200)
+      })
+      .catch((err) => {
+        reply(boom.notImplemented);
+      })
+  }
 };
