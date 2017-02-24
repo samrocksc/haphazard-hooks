@@ -13,4 +13,15 @@ module.exports = [
       tags: ['api'],
     },
   },
+  {
+    method: 'POST',
+    path: '/balderdash',
+    handler: balderdash,
+    config: {
+      description: 'BALDERDASH!',
+      notes: 'Returns a 200',
+      tags: ['api'],
+    },
+  },
+
 ];
