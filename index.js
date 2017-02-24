@@ -37,6 +37,7 @@ server.register({ register: routes }, {
     prefix: config.prefix,
   },
 }, (err) => {
+  console.log('hello');
   if (err) {
     throw err;
   }
