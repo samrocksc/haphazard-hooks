@@ -1,0 +1,40 @@
+{
+  "name": "haphazard-hooks",
+  "version": "1.0.0",
+  "description": "GitHooks with Hapi ---",
+  "main": "index.js",
+  "dependencies": {
+    "blipp": "^2.3.0",
+    "boom": "^4.2.0",
+    "eslint": "^3.16.1",
+    "hapi": "^16.1.0",
+    "hapi-cors-headers": "^1.0.0",
+    "hapi-swagger": "^7.7.0",
+    "inert": "^4.1.0",
+    "joi": "^10.2.2",
+    "lodash": "^4.17.4",
+    "nodemon": "^1.11.0",
+    "vision": "^4.1.1"
+  },
+  "devDependencies": {
+    "eslint": "^3.4.0",
+    "eslint-config-airbnb": "^11.0.0",
+    "eslint-plugin-import": "^1.14.0",
+    "eslint-plugin-jsx-a11y": "^2.2.1",
+    "eslint-plugin-react": "^6.2.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/samrocksc/haphazard-hooks.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/samrocksc/haphazard-hooks/issues"
+  },
+  "homepage": "https://github.com/samrocksc/haphazard-hooks#readme"
+}
