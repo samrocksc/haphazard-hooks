@@ -45,7 +45,8 @@ server.register({ register: routes }, {
 });
 
 server.start(() => {
-  debug('started successfully');
+  process.title = 'gitHooks';
+  debug('started successfully', process.title);
 });
 
 module.exports = server;

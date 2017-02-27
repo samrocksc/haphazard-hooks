@@ -1,9 +1,9 @@
 const exec = require('child_process').exec;
 const boom = require('boom');
-const githook = require('../lib/githook');
+const gitHook = require('../lib/gitHook');
 
 module.exports = function develop(request, reply) {
-  const refRef = '/refs/heads/develop';
+  const refRef = 'refs/heads/develop';
   const shellPath = 'sh ~/GitHub/RepoName/.git/hooks/post-update';
   if (request.payload.ref === refRef) {
     gitHook(shellPath)

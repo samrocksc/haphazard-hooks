@@ -25,7 +25,10 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "DEBUG=server*,error* nodemon index.js"
+    "dev": "DEBUG=server*,error* nodemon index.js",
+    "stop": "pkill --signal SIGINT gitHooks",
+    "start": "DEBUG=server*,error* node index.js",
+    "up": "echo 'simulating server database up'"
   },
   "repository": {
     "type": "git",
