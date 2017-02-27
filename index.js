@@ -6,6 +6,7 @@ const HapiSwagger = require('hapi-swagger');
 const Inert = require('inert');
 const routes = require('./server/routes');
 const Vision = require('vision');
+const debug = require('debug')('server');
 
 const server = new Hapi.Server();
 
@@ -37,12 +38,13 @@ server.register({ register: routes }, {
     prefix: config.prefix,
   },
 }, (err) => {
-  console.log('hello');
   if (err) {
     throw err;
   }
 });
 
-server.start();
+server.start(() => {
+  debug('started successfully');
+});
 
 module.exports = server;
