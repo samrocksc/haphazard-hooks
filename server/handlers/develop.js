@@ -4,7 +4,7 @@ const gitHook = require('../lib/gitHook');
 
 module.exports = function develop(request, reply) {
   const refRef = 'refs/heads/develop';
-  const shellPath = 'sh ~/GitHub/RepoName/.git/hooks/post-update';
+  const shellPath = '~/GitHub/RepoName/.git/hooks/post-update';
   if (request.payload.ref === refRef) {
     gitHook(shellPath)
       .then((res) =>{
