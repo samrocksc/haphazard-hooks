@@ -32,3 +32,13 @@ In this case the following file structure ensures:
 When GitHub actually receives a push is when it actually will deploy it's webhook.  This webhook will send a json package with a `POST` to your server.  The information in the `payload.ref` is what we're actually looking for on this.  `payload.ref` will tell us if it is relevant to our githook to run our post-update.
 
 In Git all of the standard GitHooks are stored in `.git/hooks`.  This is a great place to find out information about it.
+
+## Whitelisting the GitHub GitHook IP
+---
+
+I'm a huge fan of whitelisting IP's and also basic auth.  Right now we currently have whitelisting set up with UFW on ubuntu.  If you would like to set it up here is an easy command to make that happen
+
+```
+sudo ufw allow from 192.30.252.0/22 to any port 3000
+```
+*_assuming you have port 3000 as your port_

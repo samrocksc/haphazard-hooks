@@ -3,9 +3,9 @@ const debug = require('debug')('handler');
 
 module.exports = function gitHook(location) {
   return new Promise((resolve, reject) => {
-    const child = exec(location, (error, stdout, stederr) => {
+    const child = exec(location, (error, stdout, stderr) => {
       if (error) {
-        debug('Error=>', stderr)
+        debug('Error=>')
         reject('problem running script');
       }
       debug('lib=>', stdout);
